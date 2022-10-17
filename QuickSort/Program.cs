@@ -14,7 +14,13 @@ namespace QuickSort
 
         private int n;
 
+        void read()
+        {
+            while (true)
+            {
 
+            }
+        }
         static void Main(string[] args)
         {
         }
