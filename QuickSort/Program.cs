@@ -87,7 +87,16 @@ namespace QuickSort
         }
         void display()
         {
+            Console.WriteLine("\n---------------------");
+            Console.WriteLine(" Sorted array elements ");
+            Console.WriteLine("\n---------------------");
 
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(arr[j]);
+            }
+            Console.WriteLine("\nNumber of comparisons : " +cmp_count);
+            Console.WriteLine("\nNumber of data movements : "+cmp_count);
         }
         static void Main(string[] args)
         {
