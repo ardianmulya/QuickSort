@@ -43,6 +43,7 @@ namespace QuickSort
             int temp;
             temp = arr[x];
             arr[x] = arr[y];
+            arr[y] = temp;
         }
         public void q_sort(int low, int high)
         {
@@ -54,6 +55,7 @@ namespace QuickSort
             j = high;
 
             pivot = arr[low];
+
             while (i <= j)
             {
                 while ((arr[i] <= pivot) && (i <= high))
