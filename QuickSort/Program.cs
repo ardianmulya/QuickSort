@@ -46,16 +46,48 @@ namespace QuickSort
         }
         public void q_sort(int low, int high)
         {
+            int pivot, i, j;
+            if (low > high)
+                return;
 
+            i = low + 1;
+            j = high;
+
+            pivot = arr[low];
+            while (i <= j)
+            {
+                while ((arr[i] <= pivot) && (i <= high))
+                {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                while ((arr[j] > pivot) && (j >= low))
+                {
+                    j--;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                if (i < j)
+                {
+                    swap(i, j);
+                    mov_count++;
+                }
+            }
+            if (low < j)
+            {
+                swap(low, j);
+                mov_count++;
+            }
+            q_sort(low, j - 1);
+
+            q_sort(j + 1, high);
         }
         void display()
         {
-            Console.WriteLine(" Element array yang telah tersusun ");
-            for (int j = 0; j < n; j++)
-            {
-                Console.WriteLine(arr[j]);
-            }
-            Console.WriteLine("");
+
         }
         static void Main(string[] args)
         {
