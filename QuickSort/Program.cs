@@ -44,7 +44,10 @@ namespace QuickSort
             temp = arr[x];
             arr[x] = arr[y];
         }
+        public void q_sort(int low, int high)
+        {
 
+        }
         void display()
         {
             Console.WriteLine(" Element array yang telah tersusun ");
