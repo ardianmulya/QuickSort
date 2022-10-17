@@ -104,7 +104,12 @@ namespace QuickSort
         }
         static void Main(string[] args)
         {
-
+            Program mylist = new Program();
+            mylist.read();
+            mylist.q_sort(0, mylist.getsize() - 1);
+            mylist.display();
+            Console.WriteLine("\n\nPress Enter to exit.");
+            Console.Read();
         }
     }
 }
