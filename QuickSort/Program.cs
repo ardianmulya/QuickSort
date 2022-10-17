@@ -37,6 +37,23 @@ namespace QuickSort
                 arr[i] = Int32.Parse(s1);
             }
         }
+
+        void swap(int x, int y)
+        {
+            int temp;
+            temp = arr[x];
+            arr[x] = arr[y];
+        }
+
+        void display()
+        {
+            Console.WriteLine(" Element array yang telah tersusun ");
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(arr[j]);
+            }
+            Console.WriteLine("");
+        }
         static void Main(string[] args)
         {
         }
